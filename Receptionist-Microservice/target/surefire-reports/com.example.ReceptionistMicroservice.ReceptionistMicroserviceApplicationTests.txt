@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: com.example.ReceptionistMicroservice.ReceptionistMicroserviceApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 10.491 s <<< FAILURE! - in com.example.ReceptionistMicroservice.ReceptionistMicroserviceApplicationTests
+saveRoom  Time elapsed: 0.301 s  <<< ERROR!
+org.springframework.transaction.TransactionSystemException: Could not commit JPA transaction; nested exception is javax.persistence.RollbackException: Error while committing the transaction
+	at com.example.ReceptionistMicroservice.ReceptionistMicroserviceApplicationTests.saveRoom(ReceptionistMicroserviceApplicationTests.java:33)
+Caused by: javax.persistence.RollbackException: Error while committing the transaction
+	at com.example.ReceptionistMicroservice.ReceptionistMicroserviceApplicationTests.saveRoom(ReceptionistMicroserviceApplicationTests.java:33)
+Caused by: javax.validation.ConstraintViolationException: 
+Validation failed for classes [com.example.ReceptionistMicroservice.entity.Room] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='isocuppied must be Avaliable or Booked!', propertyPath=isOccupied, rootBeanClass=class com.example.ReceptionistMicroservice.entity.Room, messageTemplate='isocuppied must be Avaliable or Booked!'}
+]
+	at com.example.ReceptionistMicroservice.ReceptionistMicroserviceApplicationTests.saveRoom(ReceptionistMicroserviceApplicationTests.java:33)
+
+deleteEmployee  Time elapsed: 0.005 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessApiUsageException: Provided id of the wrong type for class com.example.ReceptionistMicroservice.entity.Room. Expected: class java.lang.Integer, got class java.lang.Long; nested exception is java.lang.IllegalArgumentException: Provided id of the wrong type for class com.example.ReceptionistMicroservice.entity.Room. Expected: class java.lang.Integer, got class java.lang.Long
+	at com.example.ReceptionistMicroservice.ReceptionistMicroserviceApplicationTests.deleteEmployee(ReceptionistMicroserviceApplicationTests.java:64)
+Caused by: java.lang.IllegalArgumentException: Provided id of the wrong type for class com.example.ReceptionistMicroservice.entity.Room. Expected: class java.lang.Integer, got class java.lang.Long
+	at com.example.ReceptionistMicroservice.ReceptionistMicroserviceApplicationTests.deleteEmployee(ReceptionistMicroserviceApplicationTests.java:64)
+Caused by: org.hibernate.TypeMismatchException: Provided id of the wrong type for class com.example.ReceptionistMicroservice.entity.Room. Expected: class java.lang.Integer, got class java.lang.Long
+	at com.example.ReceptionistMicroservice.ReceptionistMicroserviceApplicationTests.deleteEmployee(ReceptionistMicroserviceApplicationTests.java:64)
+
+updateRoom  Time elapsed: 0.005 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessApiUsageException: Provided id of the wrong type for class com.example.ReceptionistMicroservice.entity.Room. Expected: class java.lang.Integer, got class java.lang.Long; nested exception is java.lang.IllegalArgumentException: Provided id of the wrong type for class com.example.ReceptionistMicroservice.entity.Room. Expected: class java.lang.Integer, got class java.lang.Long
+	at com.example.ReceptionistMicroservice.ReceptionistMicroserviceApplicationTests.updateRoom(ReceptionistMicroserviceApplicationTests.java:39)
+Caused by: java.lang.IllegalArgumentException: Provided id of the wrong type for class com.example.ReceptionistMicroservice.entity.Room. Expected: class java.lang.Integer, got class java.lang.Long
+	at com.example.ReceptionistMicroservice.ReceptionistMicroserviceApplicationTests.updateRoom(ReceptionistMicroserviceApplicationTests.java:39)
+Caused by: org.hibernate.TypeMismatchException: Provided id of the wrong type for class com.example.ReceptionistMicroservice.entity.Room. Expected: class java.lang.Integer, got class java.lang.Long
+	at com.example.ReceptionistMicroservice.ReceptionistMicroserviceApplicationTests.updateRoom(ReceptionistMicroserviceApplicationTests.java:39)
+
+getRoomById  Time elapsed: 0.004 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessApiUsageException: Provided id of the wrong type for class com.example.ReceptionistMicroservice.entity.Room. Expected: class java.lang.Integer, got class java.lang.Long; nested exception is java.lang.IllegalArgumentException: Provided id of the wrong type for class com.example.ReceptionistMicroservice.entity.Room. Expected: class java.lang.Integer, got class java.lang.Long
+	at com.example.ReceptionistMicroservice.ReceptionistMicroserviceApplicationTests.getRoomById(ReceptionistMicroserviceApplicationTests.java:57)
+Caused by: java.lang.IllegalArgumentException: Provided id of the wrong type for class com.example.ReceptionistMicroservice.entity.Room. Expected: class java.lang.Integer, got class java.lang.Long
+	at com.example.ReceptionistMicroservice.ReceptionistMicroserviceApplicationTests.getRoomById(ReceptionistMicroserviceApplicationTests.java:57)
+Caused by: org.hibernate.TypeMismatchException: Provided id of the wrong type for class com.example.ReceptionistMicroservice.entity.Room. Expected: class java.lang.Integer, got class java.lang.Long
+	at com.example.ReceptionistMicroservice.ReceptionistMicroserviceApplicationTests.getRoomById(ReceptionistMicroserviceApplicationTests.java:57)
+
