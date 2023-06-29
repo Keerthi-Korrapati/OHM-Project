@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: com.example.MangerMicroservice.MangerMicroserviceApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 10.994 s <<< FAILURE! - in com.example.MangerMicroservice.MangerMicroserviceApplicationTests
+deleteEmployee  Time elapsed: 0.282 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessApiUsageException: Provided id of the wrong type for class com.example.MangerMicroservice.entity.Employee. Expected: class java.lang.Integer, got class java.lang.Long; nested exception is java.lang.IllegalArgumentException: Provided id of the wrong type for class com.example.MangerMicroservice.entity.Employee. Expected: class java.lang.Integer, got class java.lang.Long
+	at com.example.MangerMicroservice.MangerMicroserviceApplicationTests.deleteEmployee(MangerMicroserviceApplicationTests.java:66)
+Caused by: java.lang.IllegalArgumentException: Provided id of the wrong type for class com.example.MangerMicroservice.entity.Employee. Expected: class java.lang.Integer, got class java.lang.Long
+	at com.example.MangerMicroservice.MangerMicroserviceApplicationTests.deleteEmployee(MangerMicroserviceApplicationTests.java:66)
+Caused by: org.hibernate.TypeMismatchException: Provided id of the wrong type for class com.example.MangerMicroservice.entity.Employee. Expected: class java.lang.Integer, got class java.lang.Long
+	at com.example.MangerMicroservice.MangerMicroserviceApplicationTests.deleteEmployee(MangerMicroserviceApplicationTests.java:66)
+
+getEmployeeById  Time elapsed: 0 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessApiUsageException: Provided id of the wrong type for class com.example.MangerMicroservice.entity.Employee. Expected: class java.lang.Integer, got class java.lang.Long; nested exception is java.lang.IllegalArgumentException: Provided id of the wrong type for class com.example.MangerMicroservice.entity.Employee. Expected: class java.lang.Integer, got class java.lang.Long
+	at com.example.MangerMicroservice.MangerMicroserviceApplicationTests.getEmployeeById(MangerMicroserviceApplicationTests.java:58)
+Caused by: java.lang.IllegalArgumentException: Provided id of the wrong type for class com.example.MangerMicroservice.entity.Employee. Expected: class java.lang.Integer, got class java.lang.Long
+	at com.example.MangerMicroservice.MangerMicroserviceApplicationTests.getEmployeeById(MangerMicroserviceApplicationTests.java:58)
+Caused by: org.hibernate.TypeMismatchException: Provided id of the wrong type for class com.example.MangerMicroservice.entity.Employee. Expected: class java.lang.Integer, got class java.lang.Long
+	at com.example.MangerMicroservice.MangerMicroserviceApplicationTests.getEmployeeById(MangerMicroserviceApplicationTests.java:58)
+
+updateEmployee  Time elapsed: 0.009 s  <<< ERROR!
+org.springframework.dao.InvalidDataAccessApiUsageException: Provided id of the wrong type for class com.example.MangerMicroservice.entity.Employee. Expected: class java.lang.Integer, got class java.lang.Long; nested exception is java.lang.IllegalArgumentException: Provided id of the wrong type for class com.example.MangerMicroservice.entity.Employee. Expected: class java.lang.Integer, got class java.lang.Long
+	at com.example.MangerMicroservice.MangerMicroserviceApplicationTests.updateEmployee(MangerMicroserviceApplicationTests.java:40)
+Caused by: java.lang.IllegalArgumentException: Provided id of the wrong type for class com.example.MangerMicroservice.entity.Employee. Expected: class java.lang.Integer, got class java.lang.Long
+	at com.example.MangerMicroservice.MangerMicroserviceApplicationTests.updateEmployee(MangerMicroserviceApplicationTests.java:40)
+Caused by: org.hibernate.TypeMismatchException: Provided id of the wrong type for class com.example.MangerMicroservice.entity.Employee. Expected: class java.lang.Integer, got class java.lang.Long
+	at com.example.MangerMicroservice.MangerMicroserviceApplicationTests.updateEmployee(MangerMicroserviceApplicationTests.java:40)
+
